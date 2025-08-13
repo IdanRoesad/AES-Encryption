@@ -219,11 +219,11 @@ void printUnpaddedAscii(const std::array<uint8_t, 16>& block, const std::string&
 
 int main() {
     std::string plaintext_str;
-    std::cout << "Enter plaintext (this version handles up to 16 characters): ";
+    std::cout << "Enter plaintext: ";
     std::getline(std::cin, plaintext_str);
 
     if (plaintext_str.length() > 16) {
-        std::cout << "Input is too long, truncating to 16 characters." << std::endl;
+        std::cout << "Input is too long.." << std::endl;
         plaintext_str.resize(16);
     }
 
@@ -260,4 +260,5 @@ int main() {
     printUnpaddedAscii(decryptedtext, "Plaintext after decryption:");
 
     return 0;
+
 }
